@@ -4,3 +4,7 @@ sqlalchemy-cockroachdb
 flask
 gunicorn
 flask-pagedown
+flask_wtf
+wtforms
+markdown
+flask_limiter
