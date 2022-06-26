@@ -83,7 +83,7 @@ def post_article():
     else:
         ip = request.environ['HTTP_X_FORWARDED_FOR']
     print(ip)
-    author = str(request.form["author"]) + " :" + ip
+    author = str(request.form["author"]) + ":" + ip
     title = str(request.form["title"])
     snippet = str(request.form["snippet"])
     content = form.pagedown.data
