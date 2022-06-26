@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="../static/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  {{ pagedown.include_pagedown() }}
+  <title>Create</title>
+</head>
+
+<body>
+  <!-- Remove this class if you dont like bg -->
+
+  <!-- NAVBAR -->
+  <nav class="navbar sticky-top navbar-dark navbar-expand-lg bg-dark mb-3">
+    <div class="container-fluid">
+      <a class="navbar-brand " href="/"><strong>REKT.</strong></a>
+    </div>
+  </nav>
+
+  <!-- FORM -->
+  <div class="col-10 mx-auto">
+    <form action="/article/create" method="POST">
+      <div>
+        {{ form.title.label(class="form-label") }}
+        {{ form.title(class="form-control", placeholder="An interesting title") }}
+      </div>
+      <div>
+        {{ form.author.label(class="form-label") }}
+        {{ form.author(class="form-control", placeholder="SpaceMonkey") }}
+      </div>
+      <div>
+        {{ form.snippet.label(class="form-label") }}
+        {{ form.snippet(class="form-control", placeholder="Get better at Tetris") }}
+      </div>
+      <div>
+        {{ form.pagedown.label(class="form-label") }}
+        {{ form.pagedown(only_input=True, class="form-control", placeholder="Write your article here") }}
+        <br>
+        <a href="https://www.markdownguide.org/cheat-sheet/">Get help with markdown</a>
+        <br>
+        Live Markdown Preview :
+        {{ form.pagedown(only_preview=True, class="form-control") }}
+      </div>
+      {{ form.submit(class="btn btn-success mt-3 formbutton") }}
+    </form>
+  </div>
+</body>
+
+</html>
