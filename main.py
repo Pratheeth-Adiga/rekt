@@ -66,7 +66,8 @@ def index():
                     lambda s: fetch_articles(s))
     if articles != -1:
         return render_template("index.html", articles=articles, markdown = markdown, Markup = Markup)
-    return render_template("empty.html")
+    else:
+        return render_template("empty.html")
 
 @app.route("/article/create", methods=["GET"])
 def get_article_form():
