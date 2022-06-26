@@ -45,12 +45,12 @@
                     }}
                 </div>
                 <div>
-                    {{ form.snippet.label(class="form-label") }} {{
-                    form.snippet(class="form-control", placeholder="Get better at Tetris") }}
+                    {{ form.snippet.label(class="form-label") }} 
+                    {{ form.snippet(class="form-control", placeholder="Get better at Tetris") }}
                 </div>
                 <div>
                     {{ form.pagedown.label(class="form-label") }} {{
-                    form.pagedown(only_input=True, class="form-control",
+                    form.pagedown(rows=10, only_input=True, class="form-control",
                     placeholder="Write your article here") }}
                     <br />
                     <a href="https://www.markdownguide.org/cheat-sheet/" target="_blank"
