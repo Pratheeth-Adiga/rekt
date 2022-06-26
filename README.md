@@ -1,5 +1,10 @@
 # REKT
 This is a submission for the [Hacking Heist 2.0 Hackathon.](https://hackingheist2.web.app/)
+
+Team members:
+- Vineeth Raghavan
+- Pratheeth Adiga
+
 ## The application 
 The application is an open knowledge contribution platform that is powered by Flask and CockroachDB. The platform is primarily targeted towards gamers who have interesting insights to contribute about the games they play.
 ## Features
