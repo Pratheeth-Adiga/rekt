@@ -75,7 +75,6 @@ def get_article_form():
     return render_template("create_article.html", form=form)
 
 @app.route("/article/create", methods=["POST", "GET"])
-@limiter.limit("1/minute", override_defaults=False)
 def post_article():
     form = PostForm()
     if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
