@@ -10,4 +10,4 @@ The application is an open knowledge contribution platform that is powered by Fl
 ## Features
 - Supports Markdown out-of-the-box
 - Doesn't require the user to sign up. It captures the IP and merges it with the author's name to create a unique string of identification.
-- Has a rate-limiting features to reduce spam and the chances of server overload.
+- Has a rate-limiting feature to reduce spam and the chances of server overload.
